@@ -17,13 +17,13 @@ namespace DesafioProjetoHospedagem.Models
         {
             // TODO: Verificar se a capacidade é maior ou igual ao número de hóspedes sendo recebido
             // *IMPLEMENTE AQUI*
-            if (hospedes.Count > Suite.Capacidade)
+            if (Suite.Capacidade >= hospedes.Count)
             {
                 Hospedes = hospedes;
             }
             else
             {
-                Hospedes = hospedes;
+                throw new Exception("A capacidade disponível é menor do que o número de hóspedes.");
                 // TODO: Retornar uma exception caso a capacidade seja menor que o número de hóspedes recebido
                 // *IMPLEMENTE AQUI*
             }
